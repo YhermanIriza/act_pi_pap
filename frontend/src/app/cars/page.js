@@ -7,10 +7,10 @@ export default function CarsPage() {
   const [cars, setCars] = useState([]);
 
   useEffect(() => {
-    api.get("/car")
+    api.get("/cars/")
       .then((res) => {
         setCars(res.data);
-      })
+      })  
       .catch((err) => {
         console.error("Error al obtener autos:", err);
       });
